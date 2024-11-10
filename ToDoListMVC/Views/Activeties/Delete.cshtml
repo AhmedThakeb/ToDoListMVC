@@ -1,0 +1,9 @@
+﻿@model Activety
+<h1>Are You Sure, You Want To Delete This</h1>
+<form class="card__form" asp-controller="Activeties" asp-action="Delete" method="post">
+
+	<input type="text" asp-for="Name" />
+	<span asp-validation-for="Name"></span>
+	<input type="submit" value="Delete" />
+	<a href="/Activeties/index"> No</a>
+</form>

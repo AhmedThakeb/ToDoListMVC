@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Activety>
+@{
+    ViewData["Title"] = "Aciveties";
+}
+<div class="card">
+    <span class="card__title">Categories</span>
+    <p class="card__content">
+        @if (!Model.Any())
+        {
+            <div class="alert alert-warning" role="alert">
+                There is no data!
+            </div>
+        }
+        else
+        {
+            <table border="2" class="">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>Name</td>
+                        <td>Create On</td>
+                        <td>Update On</td>
+                        <td>Actions</td>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Name</td>
+                        <td>@item.CreateOn</td>
+                        <td>@item.UpdateTime</td>
+                        <td>
+                            <a class="btn btn-outline-secondary" asp-controller="Activeties" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="btn btn-outline-secondary" asp-controller="Activeties" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </table>
+        }
+    </p>
+    <form class="card__form">
+
+        >
+        <button asp-controller="Activeties" asp-action="Create" class="card__button alert-primary ">Add</button>
+    </form>
+</div>

@@ -1,0 +1,10 @@
+﻿@model ActivetyVM
+@{
+    ViewData["Title"] = "Add";
+}
+<form class="card__form" asp-controller="Activeties" asp-action="Create" method="post">
+
+    <input required="" type="text" placeholder="Name" asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+    <button asp-controller="Activeties" asp-action="create" class="card__button alert-primary " type="submit"><i class="bi bi-plus"></i>Save</button>
+</form>

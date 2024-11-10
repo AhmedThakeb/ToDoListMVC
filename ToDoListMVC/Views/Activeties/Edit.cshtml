@@ -1,0 +1,10 @@
+﻿@model Activety
+@{
+	ViewData["Title"] = "Edit";
+}
+<form class="card__form" asp-controller="Activeties" asp-action="Edit" method="post">
+
+	<input type="text" asp-for="Name" />
+	<span asp-validation-for="Name"></span>
+	<input type="submit" value="Save" />
+</form>
