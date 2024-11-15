@@ -17,6 +17,7 @@ namespace ToDoListMVC.Controllers
         public IActionResult Index()
 		{
             var Activeties = Db.Activeties;
+            
 			return View(Activeties);
 		}
         [HttpGet]

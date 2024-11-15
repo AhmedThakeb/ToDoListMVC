@@ -10,7 +10,7 @@ namespace ToDoListMVC.Entities
         [MaxLength(150)]
         public string Name { get; set; }
         public DateTime CreateOn { get; set; } = DateTime.Now;
-        public DateTime UpdateTime { get; set; }
+        public DateTime? UpdateTime { get; set; }
 
     }
 }
